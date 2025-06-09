@@ -47,34 +47,34 @@ Built for quick testing, local dev, or self-hosted observability workflows.
 
 4. **Run the app**
 
-Make sure you have all dependencies installed:
+   Make sure you have all dependencies installed:
 
-```bash
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
-## 5. Test the webhook
+5. **Test the webhook**
 
-To test your Aircall webhook:
+   To test your Aircall webhook:
 
-1. Go to your [Aircall dashboard](https://dashboard.aircall.io).
-2. Navigate to **Integrations** → **Webhook**.
-3. Add your Glitch (or deployed) app URL, for example: `https://your-glitch-app.glitch.me/webhook`.
-4. Make a test call or send an SMS to your Aircall number.
-5. Check your terminal or logs — your app should print incoming webhook data.
+   1. Go to your [Aircall dashboard](https://dashboard.aircall.io).
+   2. Navigate to **Integrations** → **Webhook**.
+   3. Add your Glitch (or deployed) app URL, for example: `https://your-glitch-app.glitch.me/webhook`.
+   4. Make a test call or send an SMS to your Aircall number.
+   5. Check your terminal or logs — your app should print incoming webhook data.
 
-If everything is set correctly, data will be logged and sent to your Elastic instance.
+   If everything is set correctly, data will be logged and sent to your Elastic instance.
 
-## 6. Check your data in Elastic
+6. **Check your data in Elastic**
 
-Once your app receives events from Aircall, and the data is sent to Elastic APM:
+   Once your app receives events from Aircall, and the data is sent to Elastic APM:
 
-1. Go to your [Kibana](https://www.elastic.co/kibana/) instance.
-2. Navigate to **Index Management** to make sure your index is created (e.g., `aircall-*`).
-3. Use **Discover** to view incoming events.
-4. Filter or search by `event_type` to easily find `call` or `sms` entries.
-5. If you’ve set a custom index name or fields, check that your mapping reflects that.
+   1. Go to your [Kibana](https://www.elastic.co/kibana/) instance.
+   2. Navigate to **Index Management** to make sure your index is created (e.g., `aircall-*`).
+   3. Use **Discover** to view incoming events.
+   4. Filter or search by `event_type` to easily find `call` or `sms` entries.
+   5. If you’ve set a custom index name or fields, check that your mapping reflects that.
 
-This helps verify that your webhook is successfully posting data and Elastic is storing it properly.
+   This helps verify that your webhook is successfully posting data and Elastic is storing it properly.
 
 
    
