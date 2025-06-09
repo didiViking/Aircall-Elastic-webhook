@@ -75,5 +75,7 @@ Built for quick testing, local dev, or self-hosted observability workflows.
 
    This helps verify that your webhook is successfully posting data and Elastic is storing it properly.
 
+## Resources
 
+[Medium article](https://medium.com/@dianatodea/send-aircall-data-into-elastic-a-webhook-integration-story-3753501a9d29)
    
